@@ -1,16 +1,16 @@
 USE codeup_test_db
 
-SELECT name
+SELECT *, sales
 FROM albums;
 UPDATE albums
 SET sales = sales * 10;
 
-SELECT name
+SELECT name, release_date
 FROM albums
-WHERE release_date = 1980;
+WHERE release_date < 1980;
 UPDATE albums
-SET release_date = 1980
-WHERE release_date = 1800;
+SET release_date = release_date - 100
+WHERE release_date < 1980;
 
 SELECT name
 FROM albums
