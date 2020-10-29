@@ -36,7 +36,7 @@ OR last_name LIKE '%E';
 
 SELECT *
 FROM employees
-WHERE last_name LIKE 'E%' '%E';
+WHERE last_name LIKE 'E%e';
 
 SELECT *
 FROM employees
