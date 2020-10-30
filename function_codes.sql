@@ -14,7 +14,7 @@ SELECT CURDATE();
 SELECT CURTIME();
 SELECT CURRENT_TIMESTAMP();
 
-#Shows you the time in milliseconds
+#Shows you the time in milliseconds. (Current time in milliseconds - First day of class in milliseconds)
 SELECT UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP('2020-07-20 09:00:00');
 
 #Rounds up to the nearest digit
@@ -34,6 +34,11 @@ WHERE to_date = '9999-01-01';
 
 #Shows the minimum salary from employee database
 SELECT MIN(salary)
+FROM salaries
+WHERE to_date = '9999-01-01';
+
+#Shows the max salary from employee database
+SELECT MAX(salary)
 FROM salaries
 WHERE to_date = '9999-01-01';
 
