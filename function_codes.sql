@@ -14,7 +14,7 @@ SELECT CURDATE();
 SELECT CURTIME();
 SELECT CURRENT_TIMESTAMP();
 
-#Shows you the time in milliseconds. (Current time in milliseconds - First day of class in milliseconds)
+#Shows you the time in seconds. (Current time in seconds - First day of class in seconds)
 SELECT UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP('2020-07-20 09:00:00');
 
 #Rounds up to the nearest digit
@@ -46,3 +46,11 @@ WHERE to_date = '9999-01-01';
 SELECT SUM(salary)
 FROM salaries
 WHERE to_date = '9999-01-01';
+
+# MAX, MIN, AVG, SUM -- Aggregate functions
+
+#Counts how many last names are the same and shows the last name.
+SELECT COUNT(last_name), last_name
+From employees
+GROUP BY last_name;
+
