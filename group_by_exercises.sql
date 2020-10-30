@@ -22,10 +22,12 @@ GROUP BY first_name, last_name;
 
 #Find the unique last names with a 'q' but not 'qu'
 
-SELECT DISTINCT COUNT(last_name)
+SELECT DISTINCT last_name, COUNT(last_name)
 FROM employees
 WHERE last_name LIKE '%q%'
-    AND last_name NOT LIKE '%qu%';
+    AND last_name NOT LIKE '%qu%'
+GROUP BY last_name
+ORDER BY COUNT(last_name);
 
 
 #Update your query for 'Irena', 'Vidya', or 'Maya'. Use count(*) and GROUP BY to find the number of employees for each gender with those names
