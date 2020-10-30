@@ -39,7 +39,7 @@ SELECT *
 FROM employees
 WHERE last_name LIKE 'E%' '%E';
 
-SELECT *
+SELECT emp_no, CONCAT(first_name, ' ',last_name) AS fullname, DATEDIFF(CURDATE(), '1900-01-01')
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
 AND birth_date LIKE '%12-25'
