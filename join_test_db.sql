@@ -43,13 +43,13 @@ FROM users AS u
 JOIN roles AS r
 ON r.id = u.role_id;
 
--- left join
-SELECT user.name AS user_name, roles.name AS role_name
+#left join
+SELECT users.name AS user_name, roles.name AS role_name
 FROM users
-LEFT JOIN roles ON user.role_id = roles.id;
+LEFT JOIN roles ON users.role_id = roles.id;
 
---right join
-SELECT user.name AS user_name, roles.name AS role_name
+#right join
+SELECT users.name AS user_name, roles.name AS role_name
 FROM users
 RIGHT JOIN roles ON users.role_id = roles.id;
 
